@@ -2,7 +2,7 @@
     --main-color: #5386E4; 
     --sec-color: #13387C;
     --base-color: #CADAF7;
-    --accent-color: #AF125A;
+    --accent-color: #cf6d9b;
     --accent-color2: #810E44;
 }
 
@@ -15,7 +15,45 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: 30px;
 } 
 
-.nvbr-custom {
-    background-color: var(--main-color)
+.navbar {
+    background-color: transparent !important;
 }
 
+.btn-navbar {
+    border-radius: 15px;
+    border: solid 2px var(--main-color);
+    color: var(--main-color);
+}
+
+.btn-navbar2 {
+    border-radius: 15px;
+    border: solid 2px var(--main-color);
+    background-color: var(--main-color);
+}
+
+.btn-navbar2:hover {
+    background-color: var(--accent-color2);
+    border: transparent 2px solid;
+}
+
+.btn-navbar:hover {
+    color: var(--accent-color);
+}
+
+.a-custom {
+    text-decoration: none;
+    color: white;
+}
+
+.a-custom:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.form-control {
+    background-color: rgb(236, 236, 236);
+}
+
+.form-control:focus {
+    border: none;
+}
