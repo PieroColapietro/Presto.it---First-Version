@@ -1,0 +1,17 @@
+:root {
+    --main-color: #5386E4; 
+    --sec-color: #13387C;
+    --base-color: #CADAF7;
+    --accent-color: #AF125A;
+    --accent-color2: #810E44;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+   font-family: 'Yantramanav', sans-serif;
+}
+
+.font-logo {
+    font-family: 'Shrikhand', cursive !important;
+    font-size: 30px;
+} 
+
