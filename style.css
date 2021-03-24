@@ -102,6 +102,8 @@ a {
     background-position: right;
     background-repeat: no-repeat;
   }
+
+
   .border-home {
       border-bottom: 2px solid var(--main-color);
       border-bottom-right-radius: 45px;
@@ -118,3 +120,17 @@ a {
     
   }
 
+
+
+
+  @media screen and (max-width: 530px) 
+  {.masthead  
+    {
+    background-position: center;
+    background-size:contain;
+    background-origin: padding-box;
+    }
+    .arrow-align-custom {
+    align-items: flex-end !important;
+    }
+} 
