@@ -147,15 +147,16 @@ a {
        border-radius: 30px;
        border: solid 2px var(--main-color) ;
        text-align: center;
+       height:200px
        /* z-index: 10; */
    }
-   /* .card-carrot {
+   .card-carrot {
        z-index: 0;
-       /* top: 50px; */
-       /* font-size: 300px;
+       top: -50px;
+       font-size: 200px;
        color: var(--main-color);
        transform: rotate(-40deg)
-   }  */
+   } 
 
 
 
