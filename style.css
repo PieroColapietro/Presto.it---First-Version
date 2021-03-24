@@ -130,7 +130,7 @@ a {
     background-size:contain;
     background-origin: padding-box;
     }
-    /* .arrow-align-custom {
-    align-items: flex-end;
-    } */
+    .arrow-align-custom {
+    align-items: flex-end !important;
+    }
 } 
