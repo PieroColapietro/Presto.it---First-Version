@@ -1,59 +1,123 @@
 :root {
-    --main-color: #5386E4; 
-    --sec-color: #13387C;
-    --base-color: #CADAF7;
-    --accent-color: #cf6d9b;
-    --accent-color2: #810E44;
+    --main-color: #6bb0ff; 
+    --sec-color: #113f94;
+    --base-color: #f4faff;
+    --accent-color: #b33771;
+    --accent-color2: #440321;
 }
 
 h1, h2, h3, h4, h5, h6, p{
    font-family: 'Yantramanav', sans-serif;
+   color: var(--sec-color);
+}
+a {
+    color: var(--sec-color);
+}
+.navbar {
+    background-color: transparent;
+    display: block;
+    align-items: center;
+    border-radius:30px;
+    border-bottom: 0.5px solid var(--main-color) !important;
 }
 
-.font-logo {
+.navbarBrand {
     font-family: 'Shrikhand', cursive !important;
     font-size: 30px;
+    color: var(--main-color) !important;
+    margin-right: 0px;
+    margin-left:4px;
+    background-color: trasparent;
+    display: block;
+    align-items: center;
+    text-decoration: none;
+    
+    
 } 
-
-.navbar {
+.icon-logo {
+    color: var(--accent-color) !important;
+    font-size: 30px; 
+    margin-left: 0px;
+}
+.menu-collapse {
+    color: var(--accent-color) !important;
+}
+.btn-custom {
+    /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+    background-color: var(--accent-color);
+    border-color: var(--accent-color) !important;
+    border: 2px solid ;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.btn-custom2 {
     background-color: transparent !important;
-}
-
-.btn-navbar {
-    border-radius: 15px;
-    border: solid 2px var(--main-color);
-    color: var(--main-color);
-}
-
-.btn-navbar2 {
-    border-radius: 15px;
-    border: solid 2px var(--main-color);
-    background-color: var(--main-color);
-}
-
-.btn-navbar2:hover {
-    background-color: var(--accent-color2);
-    border: transparent 2px solid;
-}
-
-.btn-navbar:hover {
-    color: var(--accent-color);
-}
-
-.a-custom {
+    border-color: var(--accent-color) !important;
+    border: 2px solid ;
+    border-radius: 25px;
     text-decoration: none;
-    color: white;
+    font-weight: 500;
 }
-
-.a-custom:hover {
+.btn-custom3 {
+    background-color: transparent !important;
+    border-color: var(--accent-color) !important;
+    border: 2px solid ;
+    border-radius: 10px;
     text-decoration: none;
-    color:white;
+    font-weight: 500;
+    margin-right: 4px;
+}
+.btn-custom4 {
+    width: 100px !important;
+    height: 100% !important;
+    border-color: var(--accent-color) !important;
+    border: 2px solid ;
+    border-radius: 30px;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--base-color);
+    
+   
+}
+.nav-li-cust {
+    color: var(--base-color)!important
+}
+.cerca-custom {
+    border-radius:10px;
+    background-color: rgba(205, 207, 207, 0.096);
+}
+.cerca-custom:focus {
+    box-shadow: none;
 }
 
-.form-control {
-    background-color: rgb(236, 236, 236);
-}
+/* header */
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('./img/rabbit-home.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .border-home {
+      border-bottom: 2px solid var(--main-color);
+      width: 25%;
+      border-bottom-right-radius: 45px;
+      font-size: 100px;
+      
+  }
+  .arrow-cst {
+      background-color: transparent;
+      border-color: transparent;
+      font-size: 60px;
+      color: var(--main-color);
+      position: relative;
+      transform: rotate(135deg);
+      top: 80px;
+      left: 100px;
+    
+  }
 
-.form-control:focus {
-    border: none;
-}
