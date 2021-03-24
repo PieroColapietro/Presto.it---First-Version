@@ -102,9 +102,10 @@ a {
     background-position: right;
     background-repeat: no-repeat;
   }
+
+
   .border-home {
       border-bottom: 2px solid var(--main-color);
-      width: 25%;
       border-bottom-right-radius: 45px;
       font-size: 100px;
       
@@ -114,10 +115,22 @@ a {
       border-color: transparent;
       font-size: 60px;
       color: var(--main-color);
-      position: relative;
       transform: rotate(135deg);
-      top: 80px;
-      left: 100px;
+    
     
   }
 
+
+
+
+  @media screen and (max-width: 530px) 
+  {.masthead  
+    {
+    background-position: center;
+    background-size:contain;
+    background-origin: padding-box;
+    }
+    /* .arrow-align-custom {
+    align-items: flex-end;
+    } */
+} 
