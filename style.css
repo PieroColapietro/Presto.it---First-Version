@@ -10,6 +10,21 @@ h1, h2, h3, h4, h5, h6, p{
    font-family: 'Yantramanav', sans-serif;
    color: var(--sec-color);
 }
+.tc-main {
+    color: var(--main-color)
+}
+.tc-sec {
+    color: var(--sec-color)
+}
+.tc-base {
+    color: var(--base-color)
+}
+.tc-accent {
+    color: var(--accent-color)
+}
+.tc-accent2 {
+    color: var(--accent-color2)
+}
 a {
     color: var(--sec-color);
 }
@@ -127,10 +142,20 @@ a {
    }
 
    .card-custom {
+        /* position: absolute;
+        margin-top: -250px; */
        border-radius: 30px;
        border: solid 2px var(--main-color) ;
        text-align: center;
+       /* z-index: 10; */
    }
+   /* .card-carrot {
+       z-index: 0;
+       /* top: 50px; */
+       /* font-size: 300px;
+       color: var(--main-color);
+       transform: rotate(-40deg)
+   }  */
 
 
 
