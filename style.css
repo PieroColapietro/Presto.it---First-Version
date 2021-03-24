@@ -93,7 +93,7 @@ a {
     box-shadow: none;
 }
 
-/* header */
+
 .masthead {
     height: 100vh;
     min-height: 500px;
@@ -120,17 +120,49 @@ a {
     
   }
 
+   .rabbit {
+       width: 500px;
+       height: 500px;
+       margin-top: 100px;
+   }
+
+   .card-custom {
+       border-radius: 30px;
+       border: solid 2px var(--main-color) ;
+       text-align: center;
+   }
+
+
+
+
+
+
+
+
+
+
 
 
 
   @media screen and (max-width: 530px) 
   {.masthead  
     {
-    background-position: center;
+    background-position-y: top;
     background-size:contain;
-    background-origin: padding-box;
     }
     .arrow-align-custom {
-    align-items: flex-end !important;
+        align-items: flex-end !important;
     }
-} 
+}
+    /* background-origin: padding-box; */
+    /* .rabbit {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        top: -20px;
+    }
+    .smP {
+        height: 180px;
+    }
+    
+}  */
