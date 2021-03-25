@@ -6,12 +6,14 @@
     --accent-color2: #440321;
 }
 
-.font-main {
-    font-family: 'Yantramanav', sans-serif;
-}
-h1, h2, h3, h4, ,h5, h6, p{
+h1, h2, h3, h4, h5, h6, p{
    font-family: 'Yantramanav', sans-serif;
    color: var(--sec-color);
+}
+h2 {
+   font-family: 'Yantramanav', sans-serif;
+   color: var(--sec-color);
+   font-size: 65px;
 }
 .tc-main {
     color: var(--main-color)
@@ -138,28 +140,34 @@ a {
     
   }
 
-   .rabbit {
-       width: 500px;
-       height: 500px;
-       margin-top: 100px;
-   }
-
    .card-custom {
         /* position: absolute;
         margin-top: -250px; */
-       border-radius: 30px;
+       border-radius: 50%;
        border: solid 2px var(--main-color) ;
        text-align: center;
-       height:200px
-       /* z-index: 10; */
+       height:auto;
+       /* z-index: 999; */
    }
    .card-carrot {
-       z-index: 0;
-       top: -50px;
-       font-size: 200px;
+       z-index: -1;
+       position: absolute;
+       bottom: 23px;
+       right: 19px;
+       font-size: 230px;
        color: var(--main-color);
-       transform: rotate(-40deg);
+       transform: rotate(-35deg);
+       /* height: 30px */
    } 
+
+
+.category-border {
+    border-radius:30px;
+    border-bottom: 0.5px solid var(--main-color) !important;
+}
+
+
+
 
    .presto-card-overlay {
       background: #6bb0ff7a;
@@ -194,20 +202,45 @@ a {
        border: transparent;
    }
 
-
-
-
-
-  @media screen and (max-width: 530px) 
-  {.masthead  
-    {
-    background-position-y: top;
-    background-size:contain;
-    }
-    .arrow-align-custom {
-        align-items: flex-end !important;
-    }
+.footer {
+    background-color: var(--base-color)
 }
+footer a {
+    text-decoration: none;
+    font-size:15px;
+    letter-spacing: 1px;
+    
+    
+
+}
+
+
+ 
+
+   @media screen and (max-width: 530px) 
+   {.masthead  
+     {
+     background-position-y: 30%;
+     background-position-x: 30%;
+     background-size:contain;
+     }
+     .arrow-align-custom {
+         align-items: flex-end !important;
+     }
+     
+ }
+ @media screen and (max-width: 1028px)
+ {
+     .sparisce-sm {
+         display: none  !important;
+ }
+ }
+ @media screen and (min-width: 1028px)
+ {
+     .appare-sm {
+         display: none  !important;
+ }
+ }
     /* background-origin: padding-box; */
     /* .rabbit {
         width: 500px;
