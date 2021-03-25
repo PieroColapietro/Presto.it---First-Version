@@ -6,7 +6,10 @@
     --accent-color2: #440321;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+.font-main {
+    font-family: 'Yantramanav', sans-serif;
+}
+h1, h2, h3, h4, ,h5, h6, p{
    font-family: 'Yantramanav', sans-serif;
    color: var(--sec-color);
 }
@@ -155,16 +158,41 @@ a {
        top: -50px;
        font-size: 200px;
        color: var(--main-color);
-       transform: rotate(-40deg)
+       transform: rotate(-40deg);
    } 
 
+   .presto-card-overlay {
+      background: #6bb0ff7a;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease-in-out;
+      color: var(--accent-color2);
+      border-radius: 20px;
+   }
 
+   .presto-card-overlay:hover {
+      backdrop-filter: blur(0px);
+      background: #6bb0ff7a;
+      color: var(--accent-color2);
+      border-radius: 20px;
+   }
 
+   .card-car {
+       border-radius: 20px;
+   }
 
+   .car-cont:focus {
+    outline: none !important;
+}
 
+   .p-radius {
+        border-radius: 20px;
+   }
 
-
-
+   .btn-car {
+       background: var(--accent-color);
+       font-size: 15px;
+       border: transparent;
+   }
 
 
 
