@@ -6,7 +6,7 @@
     --accent-color2: #440321;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p {
    font-family: 'Yantramanav', sans-serif;
    color: var(--sec-color);
 }
