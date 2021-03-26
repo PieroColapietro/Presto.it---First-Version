@@ -2,6 +2,7 @@
     --main-color: #6bb0ff; 
     --sec-color: #113f94;
     --base-color: #f4faff;
+    --base-color2: #ffffff;
     --accent-color: #b33771;
     --accent-color2: #440321;
 }
@@ -13,7 +14,10 @@ h1, h2, h3, h4, h5, h6, p{
 h2 {
    font-family: 'Yantramanav', sans-serif;
    color: var(--sec-color);
-   font-size: 65px;
+   font-size: 50px;
+}
+body {
+    background-color: var(--base-color);
 }
 .tc-main {
     color: var(--main-color)
@@ -34,7 +38,7 @@ a {
     color: var(--sec-color);
 }
 .navbar {
-    background-color: transparent;
+    background-color: var(--base-color2);
     display: block;
     align-items: center;
     border-radius:30px;
@@ -136,6 +140,7 @@ a {
       font-size: 60px;
       color: var(--main-color);
       transform: rotate(135deg);
+      margin-top: 50px;
     
     
   }
@@ -143,8 +148,8 @@ a {
    .card-custom {
         /* position: absolute;
         margin-top: -250px; */
-       border-radius: 50%;
-       border: solid 2px var(--main-color) ;
+       border-radius: 60px;
+       border: solid 2px rgb(96, 57, 187) ;
        text-align: center;
        height:auto;
        /* z-index: 999; */
@@ -152,9 +157,9 @@ a {
    .card-carrot {
        z-index: -1;
        position: absolute;
-       bottom: 23px;
+       bottom: 15px;
        right: 19px;
-       font-size: 230px;
+       font-size: 200px;
        color: var(--main-color);
        transform: rotate(-35deg);
        /* height: 30px */
@@ -166,10 +171,16 @@ a {
     border-bottom: 0.5px solid var(--main-color) !important;
 }
 
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: var(--main-color) !important;
+}
 
 
-
-   .presto-card-overlay {
+.presto-card-overlay {
       background: #6bb0ff7a;
       backdrop-filter: blur(20px);
       transition: all 0.4s ease-in-out;
@@ -214,17 +225,14 @@ footer a {
 
 }
 
-
- 
-
-   @media screen and (max-width: 530px) 
+@media screen and (max-width: 530px) 
    {.masthead  
      {
      background-position-y: 30%;
      background-position-x: 30%;
      background-size:contain;
      }
-     .arrow-align-custom {
+.arrow-align-custom {
          align-items: flex-end !important;
      }
      
@@ -253,3 +261,24 @@ footer a {
     }
     
 }  */
+
+
+/* PAGINA ANNUNCI  */
+
+.filter-box {
+    
+    border: 1px solid var(--main-color);
+    height: 50vh;
+    background-color: hsl(211, 91%, 91%);;
+    border-radius: 150px;
+    /* background-image: url(./img/rabbit.svg); */
+    background-repeat: repeat
+}
+.filter-box-icon {
+
+    opacity: 40%;
+    
+}
+
+
+

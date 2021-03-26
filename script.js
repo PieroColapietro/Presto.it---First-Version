@@ -1,3 +1,4 @@
+let categoryWrapper = document.querySelector('.categ-carus');
 function populateCategories() {
     // let categories = ['Motori', 'Telefonia', 'Immobili', 'Lavoro', 'Servizi', 'Elettronica', 'Accessori', 'Musica', 'pinco']
     let categories = [
@@ -11,16 +12,16 @@ function populateCategories() {
         { nome: 'Musica', icon: '<i class="fas fa-tshirt fs-1 pb-4"></i>' },
         { nome: 'pinco', icon: '<i class="fas fa-tshirt fs-1 pb-4"></i>' },
     ]
-    let categoryWrapper = document.querySelector('#category-wrapper');
+    
     categories.forEach(categoria => {
         let card = document.createElement('div')
         card.classList.add('col-12', 'col-lg-4', 'py-3',)
         card.innerHTML = `
                 
-                      <div class="card card-custom my-5">
+                    <div class="card card-custom my-5 mx-5">
                       
                         <div class="card-body">
-                        ${categoria.icon}
+                         ${categoria.icon}
                             <h4 class="card-text fw-bold">${categoria.nome}</h4>
                             
                             <a href="#" class="btn btn-primary btn-custom">Vai alla sezione</a>
@@ -35,10 +36,13 @@ function populateCategories() {
     })
 
 }
-populateCategories()
-
+if(categoryWrapper) {
+    populateCategories()
+}
+// popolamento carosello home degli annunci
+let lastAdsWrapper = document.querySelector('.pronto-carousel')
 function populateLastAds() {
-    let wrapper = document.querySelector('.pronto-carousel')
+    
     let ads = [
         { title: 'moto', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '12100' },
         { title: 'Auto', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '50' },
@@ -73,8 +77,42 @@ function populateLastAds() {
                             </div>
                         </div>
         `
-        wrapper.appendChild(card)
+        lastAdsWrapper.appendChild(card)
     })
 }
-populateLastAds()
+if(lastAdsWrapper) {
+    populateLastAds()
+}
 
+// pagina annunci
+fetch('./annunci.json').then(data => data.json())
+    .then(annunci =>{
+        console.log(annunci);
+
+        function populateAds() {
+        let adsWrapper = document.querySelector ('#ads-wrapper')
+         
+        annunci.forEach(ad => {
+        let card = document.createElement('div')
+
+        card.classList.add( 'col-12' , 'col-lg-5', 'p-2', 'm-2')
+
+        card.innerHTML=`<div class="car-cont">
+                            <div class="card card-car bg-dark text-white mx-2">
+                                <img src="https://picsum.photos/800/600"
+                                    class="card-img p-radius" alt="...">
+                                <div class="card-img-overlay presto-card-overlay">
+                                    <div class="card-text font-main fs-4 mt-2 mb-3 tc-accent">${ad.name}</div>
+                                    <div class="card-text font-main"> lorem  ipsum dolor sit </div>
+                                    <div class="card-text font-main tc-accent">${ad.price} $ </div>
+                                    <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
+                                        for more info </button>
+                                </div>
+                            </div>
+                        </div>
+                        `
+        adsWrapper.appendChild(card)
+    });
+    }
+    populateAds()
+})
