@@ -99,9 +99,9 @@ fetch('./annunci.json').then(data => data.json())
         annunci.forEach(ad => {
         let card = document.createElement('div')
 
-        card.classList.add( 'col-12' , 'col-lg-5', 'p-2', 'm-2')
+        card.classList.add( 'col-12' , 'col-lg-5', 'p-2', )
 
-        card.innerHTML=`<div class="car-cont">
+        card.innerHTML=`<div class="car-cont m-2">
                             <div class="card card-car bg-dark text-white mx-2">
                                 <img src="https://picsum.photos/800/600"
                                     class="card-img p-radius" alt="...">
@@ -169,6 +169,20 @@ fetch('./annunci.json').then(data => data.json())
         })
     }
     filterCategory()
+
+    function filterSearch() {
+        let searchInput = document.querySelector('#input-search') 
+        // console.log(searchInput)
+        searchInput.addEventListener('input', () => {
+            let search = searchInput.value.toLowerCase()
+            
+            filtered = annunci.filter(ad => ad.name.toLowerCase().includes(search))
+            populateAds(filtered)
+        })
+
+    } filterSearch()
+
 })
+
 
 

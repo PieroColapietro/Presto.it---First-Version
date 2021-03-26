@@ -34,6 +34,13 @@ body {
 .tc-accent2 {
     color: var(--accent-color2)
 }
+
+.bg-main {
+    background-color: var(--main-color)
+}
+.bg-base {
+    background-color: var(--base-color)
+}
 a {
     color: var(--sec-color);
 }

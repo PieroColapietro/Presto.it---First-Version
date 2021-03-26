@@ -105,7 +105,9 @@
                                 </div>
                                 <input class="form-control me-2 cerca-custom" type="search"
                                     placeholder="Cosa stai cercando.." aria-label="Search">
-                                <button class="btn-custom4" type="submit"><i class="fas fa-search"></i></button>
+                                <button class="btn-custom4" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </form>
                         </div>
 
@@ -133,7 +135,7 @@
 
     </nav>
 
-        <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row d-flex justify-content-around mt-5 py-5 ">
             <div class="col-12 col-md-4 my-3">
                 <div class="card filter-box justify-content-top text-center py-4">
@@ -147,8 +149,9 @@
                     <div class="accordion m-4" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button accordion-custom" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button accordion-custom" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
                                     Filtra per categoria
                                 </button>
                             </h2>
@@ -156,61 +159,60 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body accordion-custom " id="category-filter">
                                     <div class="form-check">
-                                        <input category-filter='All' class="form-check-input" type="radio" name="category-filter">
+                                        <input category-filter='All' class="form-check-input" type="radio"
+                                            name="category-filter">
                                         <label class="form-check-label" for="flexRadioDefault1">
-                                          Tutti gli annunci
+                                            Tutti gli annunci
                                         </label>
-                                      </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button accordion-custom collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Accordion Item #2
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button accordion-custom" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Cosa stai cercando?
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <div class="accordion-body accordion-custom ">
+                                    <div class="input-group mb-3">
+                                        <input id="input-search" type="text" class="form-control rounded-pill"
+                                            placeholder="Cosa stai cercando..." aria-label="Cosa stai cercando"
+                                            aria-describedby="basic-addon1">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button accordion-custom collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Accordion Item #3
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <div class="check-box my-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox
+                                        input</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox
+                                        input</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled"
+                                        disabled>
+                                    <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch
+                                        checkbox input</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-8 justify-content-end border-start rounded-pill border-primary">
-                <div id="ads-wrapper" class="row justify-content-end"></div>
+                <div class="col-12 col-md-8 justify-content-end border-start rounded-pill border-primary">
+                    <div id="ads-wrapper" class="row justify-content-end"></div>
+                </div>
             </div>
         </div>
-    </div>
 
 </body>
 <!-- Footer -->
