@@ -147,6 +147,8 @@ fetch('./annunci.json').then(data => data.json())
     } 
     populateAds(annunci)
 
+    // filtri per categoria
+
     populateFilterCategories()
 
     function filterCategory() {
@@ -170,6 +172,8 @@ fetch('./annunci.json').then(data => data.json())
     }
     filterCategory()
 
+    // filtro ricerca per parola
+
     function filterSearch() {
         let searchInput = document.querySelector('#input-search') 
         // console.log(searchInput)
@@ -180,9 +184,35 @@ fetch('./annunci.json').then(data => data.json())
             populateAds(filtered)
         })
 
-    } filterSearch()
+    } 
+    
+    filterSearch()
+    function check() {
+        let onOff = document.querySelector('.form-check')
+        console.log(onOff);
+        for (i=0; i<onOff.length; i++) {
+        if (onOff[i].checked) {
+        console.log('paperino')
+            } else {
+            console.log('Pluto')
+            }
+    
+    } check()
+}})
 
-})
 
+    // function checkbox () {
+    //     let onOff = document.querySelector('#flexSwitchCheckChecked1');
+    //     onOff.addEventListener('input', ()=> {
+    //     if (flexSwitchCheckChecked1 = checked) {
+    //         flexSwitchCheckChecked2 = disable
+    //     } else {
+            
+    //     }
+        
+    //     })
+        
+    // }
+    // checkbox()
 
-
+    
