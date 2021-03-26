@@ -133,143 +133,189 @@
 
     </nav>
 
-
         <div class="container-fluid">
-            <div class="row d-flex justify-content-around mt-5 py-5 ">
-                <div class="col-12 col-md-4 my-3">
-                    <div class="card filter-box justify-content-top align-items-center py-4">
-                        <div>
-                            <svg class="filter-box-icon" height="50" viewBox="0 0 59 61" width="50"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path id="Shape"
-                                    d="m53.63 33.22c-.3653328-.2925003-.8846672-.2925003-1.25 0l-2.1 1.68-2.18-9.59c-.1501891-.6651058-.6288773-1.2078704-1.27-1.44-25-9.08-20.22-7.27-25.26-9.43l14-9.62c.3413522-.21411747.5208446-.61219263.4553088-1.00977618-.0655357-.39758355-.3632945-.71699095-.7553088-.81022382l-7-2c-.2477715-.06954494-.5128162-.04089146-.74.08-13.16 7-16.78 8.87-17 9s.64-.65-9.07 8.2c-.73000045.6591959-1.09049793 1.6343618-.96481711 2.6098844.12568083.9755226.7215736 1.8274726 1.59481711 2.2801156l11.2 5.51 3.15 6.15-5.36 12.78c-.1307452.3086973-.0981074.6623717.0869231.9419286s.4978333.4477983.8330769.4480714c.22 0-.57.22 12.62-3.84l3 4.05-9.35 10.11c-.2699902.2911137-.342181.7143824-.1839495 1.0785316.1582315.3641493.5169101.600195.9139495.6014684 19.59 0 18.25.11 18.66-.24l14.54-12.61c.518157-.4568171.7639011-1.1486814.65-1.83l5.39-1.32c.4571833-.1128155.7737136-.5293028.76-1v-6c.0010289-.3025884-.1350085-.5893699-.37-.78zm-25.52-30.15 4.57 1.31-13.28 9.13-6.08-2.6zm-12.89 25.12 3.49-3.48c.3921222-.3921222.3921222-1.0278778 0-1.42s-1.0278778-.3921222-1.42 0l-3.49 3.5-10.8-5.33c-.29108117-.150881-.48971209-.4348643-.5316057-.7600385s.07827222-.6502295.3216057-.8699615l8.43-7.66 12.49 5.36-6.27 15zm8.78 15.07-10.25 3.16 10.25-24.42zm-2.71 15.74 7.59-8.16 6.12 8.16zm15.87-.46-11.16-14.87v-25.24l20.15 7.32 4.74 20.89zm19.84-15.32-4.57 1.14-1.66-7.29 2.23-1.79 4 3.2z"
-                                    transform="translate(0 -1)" />
-                            </svg>
-                        </div>
-                        <h6 class="fs-1 tc-accent">
-                            Ordina per
-                        </h6>
-
+        <div class="row d-flex justify-content-around mt-5 py-5 ">
+            <div class="col-12 col-md-4 my-3">
+                <div class="card filter-box justify-content-top text-center py-4">
+                    <div>
+                        <img class="filter-icon" src="./img/sagoma-coniglietto-removebg-preview.png" alt="">
                     </div>
+                    <h6 class="fs-1 tc-accent">
+                        Ordina per
+                    </h6>
 
-                </div>
-                <div class="col-12 col-md-8 justify-content-end border-start rounded-pill border-primary">
-                    <div id="ads-wrapper" class="row justify-content-end"></div>
+                    <div class="accordion m-4" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button accordion-custom" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Filtra per categoria
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body accordion-custom" id="category-filter">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Tutti gli annunci
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button accordion-custom collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button accordion-custom collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </body>
-    <!-- Footer -->
-    <footer class="footer text-center text-lg-start">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!--Grid row-->
-            <div class="row">
-                <!--Grid column-->
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Footer Content</h5>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                        voluptatem veniam, est atque cumque eum delectus sint!
-                    </p>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-dark">Contatti</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Chi siamo</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Aiuto e contatti</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Vendi un oggetto </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-0">Social</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!" class="text-dark">Facebook <i class="fab fa-twitter tc-main mx-2"></i></a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Instagram <i class="fab fa-instagram tc-main mx-2"></i></a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Twitter <i class="fab fa-facebook tc-main mx-2"></i></a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Telegram <i class="fab fa-telegram tc-main mx-2"></i></a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Linkedin <i class="fab fa-linkedin tc-main mx-2"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
+            <div class="col-12 col-md-8 justify-content-end border-start rounded-pill border-primary">
+                <div id="ads-wrapper" class="row justify-content-end"></div>
             </div>
-            <!--Grid row-->
         </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-
     </div>
 
+</body>
+<!-- Footer -->
+<footer class="footer text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer Content</h5>
 
-    <script src="./script.js"></script>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                    voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
+            </div>
+            <!--Grid column-->
 
-    <!-- Bootstrap JS -->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-        crossorigin="anonymous"></script>
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous"></script>
-    <!-- slick carousel -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- json -->
-    <script>
-        fetch('./annunci.').then(data => data.json())
-            .then(annunci => {
-                console.log(annunci);
-            })
-    </script>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-dark">Contatti</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Chi siamo</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Aiuto e contatti</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Vendi un oggetto </a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
 
-<<<<<<< HEAD
-=======
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Social</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" class="text-dark">Facebook <i class="fab fa-twitter tc-main mx-2"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Instagram <i class="fab fa-instagram tc-main mx-2"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Twitter <i class="fab fa-facebook tc-main mx-2"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Telegram <i class="fab fa-telegram tc-main mx-2"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Linkedin <i class="fab fa-linkedin tc-main mx-2"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</div>
+
+
+<script src="./script.js"></script>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+<!-- slick carousel -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- json -->
 <script>
-    
+    fetch('./annunci.').then(data => data.json())
+        .then(annunci => {
+            console.log(annunci);
+        })
 </script>
 
->>>>>>> 6849a623ab63416609880bf572134461965a8e8f
 </body>
 
 </html>

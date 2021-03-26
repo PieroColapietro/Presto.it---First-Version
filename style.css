@@ -265,20 +265,31 @@ footer a {
 
 /* PAGINA ANNUNCI  */
 
+/* accordion */
 .filter-box {
     
     border: 1px solid var(--main-color);
-    height: 50vh;
-    background-color: hsl(211, 91%, 91%);;
-    border-radius: 150px;
-    /* background-image: url(./img/rabbit.svg); */
-    background-repeat: repeat
+    background-color: hsl(211, 91%, 91%);
+    background-image: url(./img/rabbit.svg);
+    background-repeat: repeat;
+    border-radius: 50px;
 }
-.filter-box-icon {
 
+.filter-icon {
+    height: 100px;
+    width: 200px;
     opacity: 40%;
     
 }
 
+.accordion-custom {
+    border: solid hsl(211, 91%, 91%);
+}
+
+.accordion-button:focus {
+    border: none;
+    border-color: none;
+    box-shadow: none; 
+}
 
 

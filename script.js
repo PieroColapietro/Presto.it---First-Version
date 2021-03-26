@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 let categoryWrapper = document.querySelector('.categ-carus');
-=======
-
-
-
-let categoryWrapper = document.querySelector('#category-wrapper')
-
->>>>>>> 6849a623ab63416609880bf572134461965a8e8f
 function populateCategories() {
     // let categories = ['Motori', 'Telefonia', 'Immobili', 'Lavoro', 'Servizi', 'Elettronica', 'Accessori', 'Musica', 'pinco']
     let categories = [
@@ -48,17 +40,11 @@ function populateCategories() {
 if(categoryWrapper) {
     populateCategories()
 }
-<<<<<<< HEAD
 if(categoryWrapper) {
     populateCategories()
 }
 // popolamento carosello home degli annunci
 let lastAdsWrapper = document.querySelector('.pronto-carousel')
-=======
-
-let lastAdsWrapper = document.querySelector('.pronto-carousel')
-
->>>>>>> 6849a623ab63416609880bf572134461965a8e8f
 function populateLastAds() {
     
     let ads = [
@@ -98,7 +84,6 @@ function populateLastAds() {
         lastAdsWrapper.appendChild(card)
     })
 }
-<<<<<<< HEAD
 if(lastAdsWrapper) {
     populateLastAds()
 }
@@ -106,48 +91,24 @@ if(lastAdsWrapper) {
 // pagina annunci
 fetch('./annunci.json').then(data => data.json())
     .then(annunci =>{
-        console.log(annunci);
 
-=======
-
-if(lastAdsWrapper) {
-    populateLastAds()
-}
-
-
-fetch('./annunci.json').then(data => data.json())
-    .then(annunci =>{
-        console.log(annunci);
-
->>>>>>> 6849a623ab63416609880bf572134461965a8e8f
         function populateAds() {
         let adsWrapper = document.querySelector ('#ads-wrapper')
          
         annunci.forEach(ad => {
         let card = document.createElement('div')
 
-<<<<<<< HEAD
         card.classList.add( 'col-12' , 'col-lg-5', 'p-2', 'm-2')
-=======
-        card.classList.add( 'col-12' , 'col-sm-6' , 'col-lg-4' )
->>>>>>> 6849a623ab63416609880bf572134461965a8e8f
 
         card.innerHTML=`<div class="car-cont">
                             <div class="card card-car bg-dark text-white mx-2">
                                 <img src="https://picsum.photos/800/600"
                                     class="card-img p-radius" alt="...">
                                 <div class="card-img-overlay presto-card-overlay">
-<<<<<<< HEAD
                                     <div class="card-text font-main fs-4 mt-2 mb-3 tc-accent">${ad.name}</div>
                                     <div class="card-text font-main"> lorem  ipsum dolor sit </div>
                                     <div class="card-text font-main tc-accent">${ad.price} $ </div>
                                     <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
-=======
-                                    <div class="card-text font-main fs-4 mt-2 mb-3">${ad.name}</div>
-                                    <div class="card-text font-main"> lorem  ipsum dolor sit </div>
-                                    <div class="card-text font-main">${ad.price} $ </div>
-                                    <button button type="button" class="btn btn-car btn-primary mt-3 font-main">Click
->>>>>>> 6849a623ab63416609880bf572134461965a8e8f
                                         for more info </button>
                                 </div>
                             </div>
@@ -157,8 +118,33 @@ fetch('./annunci.json').then(data => data.json())
     });
     }
     populateAds()
-<<<<<<< HEAD
+
+    function populateFilterCategories() {
+        let setCategories = new Set() ;
+        let categoriesWrapper = document.querySelector('#category-filter')
+        annunci.forEach(ad => {
+            setCategories.add(ad.category)
+        })
+
+        setCategories = Array.from(setCategories)
+
+        setCategories.forEach(cat => {
+
+            let input = document.createElement('div')
+
+            input.classList.add('form-check') 
+
+            input.innerHTML = `
+                <input class="form-check-input" type="radio" name="category-filter" >
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ${cat}
+                </label>
+            `
+            categoriesWrapper.appendChild(input)
+            
+        })
+    }
+    populateFilterCategories()
 })
-=======
-})
->>>>>>> 6849a623ab63416609880bf572134461965a8e8f
+
+
