@@ -92,8 +92,9 @@ if(lastAdsWrapper) {
 fetch('./annunci.json').then(data => data.json())
     .then(annunci =>{
 
-        function populateAds() {
+        function populateAds(annunci) {
         let adsWrapper = document.querySelector ('#ads-wrapper')
+        adsWrapper.innerHTML = ''
          
         annunci.forEach(ad => {
         let card = document.createElement('div')
@@ -117,7 +118,7 @@ fetch('./annunci.json').then(data => data.json())
         adsWrapper.appendChild(card)
     });
     }
-    populateAds()
+    populateAds(annunci)
 
     function populateFilterCategories() {
         let setCategories = new Set() ;
@@ -135,7 +136,7 @@ fetch('./annunci.json').then(data => data.json())
             input.classList.add('form-check') 
 
             input.innerHTML = `
-                <input class="form-check-input" type="radio" name="category-filter" >
+                <input class="form-check-input" type="radio" category-filter="${cat}" name="category-filter" >
                 <label class="form-check-label" for="flexRadioDefault1">
                   ${cat}
                 </label>
@@ -143,8 +144,31 @@ fetch('./annunci.json').then(data => data.json())
             categoriesWrapper.appendChild(input)
             
         })
-    }
+    } 
+    populateAds(annunci)
+
     populateFilterCategories()
+
+    function filterCategory() {
+        let filters = document.querySelectorAll('[category-filter]')
+        filters.forEach(filter => {
+            filter.addEventListener('input', ()=> {
+                let query = filter.getAttribute('category-filter')
+                let filtered;
+                if (query === 'All') {
+                   filtered = annunci
+                } else {
+                    filtered = annunci.filter(ad => ad.category === query)
+                }
+                
+
+                populateAds(filtered)
+                
+            })
+
+        })
+    }
+    filterCategory()
 })
 
 

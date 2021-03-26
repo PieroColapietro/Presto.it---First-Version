@@ -286,11 +286,6 @@
         "name": "Plettro",
         "category": "Musica",
         "price": "0.99"
-    },
-    {
-        "id": 49,
-        "name": "Modem",
-        "category": "Mimmo",
-        "price": "2.99"
     }
+   
 ]
