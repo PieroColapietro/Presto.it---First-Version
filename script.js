@@ -76,28 +76,20 @@ function populateLastAds() {
                                             <div class="col-12 footer-card">
                                                 <button button type="button" class="col-6 col-md-8 btn btn-car btn-primary font-main">Click
                                                 for more info </button>
-                                                <i onclick="myFunction(this)" class="fa fa-thumbs-up fs-2 col-1 mx-4 p-3"></i>
-                                                <div>
-                        <a href="#" class="like">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                                                <a onclick="likeHeart()" href="javascript:null" class="like" id="likes-id">
+                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                                </a>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                       
         `
         lastAdsWrapper.appendChild(card)
     })
 }
-
-function myFunction(x) {
-    x.classList.toggle("fa-thumbs-down");
-  }
-
-
 
 if(lastAdsWrapper) {
     populateLastAds()
@@ -107,181 +99,105 @@ if(lastAdsWrapper) {
 fetch('./annunci.json').then(data => data.json())
     .then(annunci =>{
 
-                function populateAds(annunci) {
-                let adsWrapper = document.querySelector ('#ads-wrapper')
-                adsWrapper.innerHTML = ''
-                
-                annunci.forEach(ad => {
-                let card = document.createElement('div')
+        function populateAds(annunci) {
+        let adsWrapper = document.querySelector ('#ads-wrapper')
+        adsWrapper.innerHTML = ''
+         
+        annunci.forEach(ad => {
+        let card = document.createElement('div')
 
-                card.classList.add( 'col-12' , 'col-lg-5', 'p-2', )
+        card.classList.add( 'col-12' , 'col-lg-5', 'p-2', )
 
-                card.innerHTML=`<div class="car-cont m-2">
-                                    <div class="card card-car bg-dark text-white mx-2">
-                                        <img src="https://picsum.photos/800/600"
-                                            class="card-img p-radius" alt="...">
-                                        <div class="card-img-overlay presto-card-overlay">
-                                            <div class="card-text font-main fs-4 mt-2 mb-3 tc-accent">${ad.name}</div>
-                                            <div class="card-text font-main"> lorem  ipsum dolor sit </div>
-                                            <div class="card-text font-main tc-accent">${ad.price} $ </div>
-                                            <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
-                                                for more info 
-                                            </button>
-                                        </div>
-                                    </div>
+        card.innerHTML=`<div class="car-cont m-2">
+                            <div class="card card-car bg-dark text-white mx-2">
+                                <img src="https://picsum.photos/800/600"
+                                    class="card-img p-radius" alt="...">
+                                <div class="card-img-overlay presto-card-overlay">
+                                    <div class="card-text font-main fs-4 mt-2 mb-3 tc-accent">${ad.name}</div>
+                                    <div class="card-text font-main"> lorem  ipsum dolor sit </div>
+                                    <div class="card-text font-main tc-accent">${ad.price} $ </div>
+                                    <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
+                                        for more info 
+                                    </button>
                                 </div>
-                                `
-                adsWrapper.appendChild(card)
-            });
-            }
+                            </div>
+                        </div>
+                        `
+        adsWrapper.appendChild(card)
+    });
+    }
 
-            populateAds(annunci)
+    populateAds(annunci)
 
-            function populateFilterCategories() {
-                let setCategories = new Set() ;
-                let categoriesWrapper = document.querySelector('#category-filter')
-                annunci.forEach(ad => {
-                    setCategories.add(ad.category)
-                })
+    function populateFilterCategories() {
+        let setCategories = new Set() ;
+        let categoriesWrapper = document.querySelector('#category-filter')
+        annunci.forEach(ad => {
+            setCategories.add(ad.category)
+        })
 
-                setCategories = Array.from(setCategories)
+        setCategories = Array.from(setCategories)
 
-                setCategories.forEach(cat => {
+        setCategories.forEach(cat => {
 
-                    let input = document.createElement('div')
+            let input = document.createElement('div')
 
-                    input.classList.add('form-check') 
+            input.classList.add('form-check') 
 
-                    input.innerHTML = `
-                        <input class="form-check-input" type="radio" category-filter="${cat}" name="category-filter" >
-                        <label class="form-check-label" for="flexRadioDefault1">
-                        ${cat}
-                        </label>
-                    `
-                    categoriesWrapper.appendChild(input)
-                    
-                })
-            } 
-            populateAds(annunci)
-
-            // filtri per categoria
-
-            populateFilterCategories()
-
-            function filterCategory() {
-                let filters = document.querySelectorAll('[category-filter]')
-                filters.forEach(filter => {
-                    filter.addEventListener('input', ()=> {
-                        let query = filter.getAttribute('category-filter')
-                        let filtered;
-                        if (query === 'All') {
-                        filtered = annunci
-                        } else {
-                            filtered = annunci.filter(ad => ad.category === query)
-                        }
-                        
-
-                        populateAds(filtered)
-                        
-                    })
-
-                })
-            }
-            filterCategory()
-
-            // filtro ricerca per parola
-
-            function filterSearch() {
-                let searchInput = document.querySelector('#input-search') 
-                // console.log(searchInput)
-                searchInput.addEventListener('input', () => {
-                    let search = searchInput.value.toLowerCase()
-                    
-                    filtered = annunci.filter(ad => ad.name.toLowerCase().includes(search))
-                    populateAds(filtered)
-                })
-
-            } 
+            input.innerHTML = `
+                <input class="form-check-input" type="radio" category-filter="${cat}" name="category-filter" >
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ${cat}
+                </label>
+            `
+            categoriesWrapper.appendChild(input)
             
-            filterSearch()
+        })
+    } 
+    populateAds(annunci)
 
-            function searchOnload() {
-                if (location.search) {
-                    let search = location.search.slice(7).toLowerCase()
-                    let searchInput = document.querySelector('#input-search') == search
-                    // console.log(searchInput)
-                    filtered = annunci.filter(ad => function (){
-                        if (ad.name.toLowerCase().includes(search)){
-                            populateAds(filtered)
-                        } else {
-                            console.log("non ho trovato nulla")
-                        }
-                    })
-                       
-                }                 
-                 
+    // filtri per categoria
+
+    populateFilterCategories()
+
+    function filterCategory() {
+        let filters = document.querySelectorAll('[category-filter]')
+        filters.forEach(filter => {
+            filter.addEventListener('input', ()=> {
+                let query = filter.getAttribute('category-filter')
+                let filtered;
+                if (query === 'All') {
+                   filtered = annunci
+                } else {
+                    filtered = annunci.filter(ad => ad.category === query)
+                }
                 
-            } searchOnload()
-    
-            function maxPrice () {
-                let maxPrice = 0
-                annunci.forEach(ad => {
-                if (Number(ad.price) > maxPrice) {
-                maxPrice = ad.price
-            } 
-        
-        
-        })           
-        console.log(maxPrice) 
-        } maxPrice()    
-    })
-    
 
-        
-//     document.getElementById("demo").onclick = function() {myFunction()};
+                populateAds(filtered)
+                
+            })
 
-// function myFunction() {
-//   document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-// }
-    // function check() {
-    //     var checkBox = document.getElementById("check-custom");
-    //     var text = document.getElementById("text");
-    //     if (checkBox.checked == true){
-    //       text.style.display = "block";
-    //     } else {
-    //        text.style.display = "none";
-    //     }
-    //   }check()
-    // function  {
-    //     let onOff = document.querySelector('')
-    //     console.log(onOff)
-    //     onOff = onOff.disabled
-        
+        })
+    }
+    filterCategory()
 
-        // for (i=0; i<onOff.length; i++) {
-        // if (onOff[i].checked) {
-        // console.log('paperino')
-        //     } else {
-        //     console.log('Pluto')
-        //     }
-    
-    
+    // filtro ricerca per parola
 
-
-
-
-    // function checkbox () {
-    //     let onOff = document.querySelector('#flexSwitchCheckChecked1');
-    //     onOff.addEventListener('input', ()=> {
-    //     if (flexSwitchCheckChecked1 = checked) {
-    //         flexSwitchCheckChecked2 = disable
-    //     } else {
+    function filterSearch() {
+        let searchInput = document.querySelector('#input-search') 
+        // console.log(searchInput)
+        searchInput.addEventListener('input', () => {
+            let search = searchInput.value.toLowerCase()
             
-    //     }
-        
-    //     })
-        
-    // }
-    // checkbox()
+            filtered = annunci.filter(ad => ad.name.toLowerCase().includes(search))
+            populateAds(filtered)
+        })
 
-    
+    } 
+})
+
+function likeHeart() {
+    let likeId =  document.querySelector('#likes-id') 
+        likeId.classList.toggle(`heart`)
+}
+likeheart()
