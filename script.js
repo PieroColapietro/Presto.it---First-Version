@@ -235,6 +235,14 @@ fetch('./annunci.json').then(data => data.json())
         console.log(maxPrice) 
         } maxPrice()    
     })
+    
+
+        
+//     document.getElementById("demo").onclick = function() {myFunction()};
+
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+// }
     // function check() {
     //     var checkBox = document.getElementById("check-custom");
     //     var text = document.getElementById("text");
