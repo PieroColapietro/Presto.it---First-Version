@@ -12,7 +12,7 @@ function populateCategories() {
         { nome: 'Musica', icon: '<i class="fas fa-tshirt fs-1 pb-4"></i>' },
         { nome: 'pinco', icon: '<i class="fas fa-tshirt fs-1 pb-4"></i>' },
     ]
-    
+
     categories.forEach(categoria => {
         let card = document.createElement('div')
         card.classList.add('col-12', 'col-lg-4', 'py-3',)
@@ -32,18 +32,21 @@ function populateCategories() {
 
     })
 
-} 
+}
 
-if(categoryWrapper) {
+
+if (categoryWrapper) {
     populateCategories()
 }
-if(categoryWrapper) {
-    populateCategories()
-}
+
+
+
+
+
 // popolamento carosello home degli annunci
 let lastAdsWrapper = document.querySelector('.pronto-carousel')
 function populateLastAds() {
-    
+
     let ads = [
         { title: 'Moto', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '12100' },
         { title: 'Auto', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '50' },
@@ -71,17 +74,14 @@ function populateLastAds() {
                                     <div class="card-text card-text-title font-main fs-1">${ad.title}</div>
                                     <div class="card-text card-text-off font-main mt-3">${ad.description}</div>
                                     <div class="card-text card-text-off font-main">${ad.price} $ </div>
-                                    <div class="container-fluid footercard">
-                                        <div class="row">
-                                            <div class="col-12 footer-card">
-                                                <button button type="button" class="col-6 col-md-8 btn btn-car btn-primary font-main">Click
-                                                for more info </button>
-                                                <a onclick="likeHeart()" href="javascript:null" class="like" id="likes-id">
-                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
-
-                                        </div>
+                                    <div class="container-fluid footercard d-flex justify-content-around align-middle my-3">
+                                    <button button type="button" class="col-7 col-md-8 btn btn-car btn-primary font-main">Click
+                                        for more info </button>
+                                    <button class="btn like tc-main fs-5">
+                                       
+                                        <i class="far fa-thumbs-up"></i>
+                                
+                                    </button>
                                     </div>
                                 </div>
                             </div>
@@ -91,24 +91,37 @@ function populateLastAds() {
     })
 }
 
-if(lastAdsWrapper) {
+if (lastAdsWrapper) {
     populateLastAds()
 }
+let likebtns = document.querySelectorAll('.like')
+// console.log(likebtns)
+
+likebtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log(btn)
+        // btn.addEventListener.toggle('')
+        btn.classList.toggle('heart')
+        btn.children[0].classList.toggle('fas')
+        btn.children[0].classList.toggle('far')
+    })
+
+})
 
 // pagina annunci
 fetch('./annunci.json').then(data => data.json())
-    .then(annunci =>{
+    .then(annunci => {
 
         function populateAds(annunci) {
-        let adsWrapper = document.querySelector ('#ads-wrapper')
-        adsWrapper.innerHTML = ''
-         
-        annunci.forEach(ad => {
-        let card = document.createElement('div')
+            let adsWrapper = document.querySelector('#ads-wrapper')
+            adsWrapper.innerHTML = ''
 
-        card.classList.add( 'col-12' , 'col-lg-5', 'p-2', )
+            annunci.forEach(ad => {
+                let card = document.createElement('div')
 
-        card.innerHTML=`<div class="car-cont m-2">
+                card.classList.add('col-12', 'col-lg-5', 'p-2',)
+
+                card.innerHTML = `<div class="car-cont m-2">
                             <div class="card card-car bg-dark text-white mx-2">
                                 <img src="https://picsum.photos/800/600"
                                     class="card-img p-radius" alt="...">
@@ -123,81 +136,81 @@ fetch('./annunci.json').then(data => data.json())
                             </div>
                         </div>
                         `
-        adsWrapper.appendChild(card)
-    });
-    }
+                adsWrapper.appendChild(card)
+            });
+        }
 
-    populateAds(annunci)
+        populateAds(annunci)
 
-    function populateFilterCategories() {
-        let setCategories = new Set() ;
-        let categoriesWrapper = document.querySelector('#category-filter')
-        annunci.forEach(ad => {
-            setCategories.add(ad.category)
-        })
+        function populateFilterCategories() {
+            let setCategories = new Set();
+            let categoriesWrapper = document.querySelector('#category-filter')
+            annunci.forEach(ad => {
+                setCategories.add(ad.category)
+            })
 
-        setCategories = Array.from(setCategories)
+            setCategories = Array.from(setCategories)
 
-        setCategories.forEach(cat => {
+            setCategories.forEach(cat => {
 
-            let input = document.createElement('div')
+                let input = document.createElement('div')
 
-            input.classList.add('form-check') 
+                input.classList.add('form-check')
 
-            input.innerHTML = `
+                input.innerHTML = `
                 <input class="form-check-input" type="radio" category-filter="${cat}" name="category-filter" >
                 <label class="form-check-label" for="flexRadioDefault1">
                   ${cat}
                 </label>
             `
-            categoriesWrapper.appendChild(input)
-            
-        })
-    } 
-    populateAds(annunci)
+                categoriesWrapper.appendChild(input)
 
-    // filtri per categoria
+            })
+        }
+        populateAds(annunci)
 
-    populateFilterCategories()
+        // filtri per categoria
 
-    function filterCategory() {
-        let filters = document.querySelectorAll('[category-filter]')
-        filters.forEach(filter => {
-            filter.addEventListener('input', ()=> {
-                let query = filter.getAttribute('category-filter')
-                let filtered;
-                if (query === 'All') {
-                   filtered = annunci
-                } else {
-                    filtered = annunci.filter(ad => ad.category === query)
-                }
-                
+        populateFilterCategories()
 
+        function filterCategory() {
+            let filters = document.querySelectorAll('[category-filter]')
+            filters.forEach(filter => {
+                filter.addEventListener('input', () => {
+                    let query = filter.getAttribute('category-filter')
+                    let filtered;
+                    if (query === 'All') {
+                        filtered = annunci
+                    } else {
+                        filtered = annunci.filter(ad => ad.category === query)
+                    }
+
+
+                    populateAds(filtered)
+
+                })
+
+            })
+        }
+        filterCategory()
+
+        // filtro ricerca per parola
+
+        function filterSearch() {
+            let searchInput = document.querySelector('#input-search')
+            // console.log(searchInput)
+            searchInput.addEventListener('input', () => {
+                let search = searchInput.value.toLowerCase()
+
+                filtered = annunci.filter(ad => ad.name.toLowerCase().includes(search))
                 populateAds(filtered)
-                
             })
 
-        })
-    }
-    filterCategory()
+        }filterSearch()
+    })
 
-    // filtro ricerca per parola
-
-    function filterSearch() {
-        let searchInput = document.querySelector('#input-search') 
-        // console.log(searchInput)
-        searchInput.addEventListener('input', () => {
-            let search = searchInput.value.toLowerCase()
-            
-            filtered = annunci.filter(ad => ad.name.toLowerCase().includes(search))
-            populateAds(filtered)
-        })
-
-    } 
-})
-
-function likeHeart() {
-    let likeId =  document.querySelector('#likes-id') 
-        likeId.classList.toggle(`heart`)
-}
-likeheart()
+// function likeHeart() {
+//     let likeId =  document.querySelector('#likes-id') 
+//         likeId.classList.toggle(`heart`)
+// }
+// likeheart()

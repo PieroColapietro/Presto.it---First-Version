@@ -1,18 +1,5 @@
+/* 
 
-@keyframes heart{
-    0%{
-        transform: rotate(0deg) scale(1.7);
-    }
-    40%{
-        transform: rotate(0deg) scale(1);
-    }
-    41%{
-        transform: rotate(360deg) scale(1);
-    }
-    100%{
-        transform: rotate(0deg) scale(1);
-    }
-}
 
 .like {
     color: #00000030;
@@ -24,7 +11,7 @@
 
 .heart i.fa-heart{
     color: #f44336;
-}
+} */
 
 :root {
     --main-color: #6bb0ff; 
@@ -32,7 +19,7 @@
     --base-color: #f4faff;
     --base-color2: #ffffff;
     --accent-color: #b33771;
-    --accent-color2: #440321;
+    --accent-color2: #d60969;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -71,6 +58,9 @@ body {
 }
 a {
     color: var(--sec-color);
+}
+.btn {
+    box-shadow: none !important;
 }
 .navbar {
     background-color: var(--base-color2);
@@ -300,10 +290,7 @@ presto-card-overlay
     }
 
 @media screen and (max-width: 768px) 
-    {.fa-thumbs-up 
-      {
-         margin-left:0px !important;
-      }
+    {
       .footer-card{
         box-sizing: content-box;
     }
@@ -324,8 +311,8 @@ presto-card-overlay
     {
     .btn-car {
         margin:0px;
-        margin-top: 15px; 
-        margin-left: -30px !important;
+        /* margin-top: 15px; 
+        margin-left: -30px !important; */
     }
     }
 
@@ -386,14 +373,54 @@ presto-card-overlay
 }
 
 
-.fa {
-  font-size: 50px;
+.far, .fas {
+  font-size: 27px;
   cursor: pointer;
   user-select: none;
+  transition: transform  ease-in-out; 
+  color: var(--sec-color)!important;
+  
+
+  
+  
 }
 
-.fa:hover {
-  color: darkblue;
+
+.like {
+    box-shadow: none !important;
+    border: none !important;
+    /* color: var(--main-color) !important; */
+  /* transform: rotate(350deg) scale(1.2); */
+  /* transform:scale(1.3) */
+}
+.heart {
+    /* color: var(--sec-color) !important; */
+    box-shadow: none !important;
+    border: none !important;
+}
+.heart:focus {
+    animation-name: heart;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-timing-function: 1;
+    /* animation-play-state: ; */
+    border: none;
+    box-shadow: none;
+    
+}
+@keyframes heart{
+    0%{
+        transform: rotate(0deg) ;
+    }
+    40%{
+        transform: rotate(0deg) ;
+    }
+    41%{
+        transform: rotate(360deg) ;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 .slick-slide:focus {
