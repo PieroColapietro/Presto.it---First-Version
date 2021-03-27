@@ -1,3 +1,30 @@
+
+@keyframes heart{
+    0%{
+        transform: rotate(0deg) scale(1.7);
+    }
+    40%{
+        transform: rotate(0deg) scale(1);
+    }
+    41%{
+        transform: rotate(360deg) scale(1);
+    }
+    100%{
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.like {
+    color: #00000030;
+    font-size: 3em;
+}
+.heart{
+    animation: heart 0.5s linear;
+}
+
+.heart i.fa-heart{
+    color: #f44336;
+}
 :root {
     --main-color: #6bb0ff; 
     --sec-color: #113f94;
@@ -218,6 +245,7 @@ a {
        background: var(--accent-color);
        font-size: 15px;
        border: transparent;
+       margin-bottom: 20px;
    }
 
 .footer {
@@ -227,23 +255,76 @@ footer a {
     text-decoration: none;
     font-size:15px;
     letter-spacing: 1px;
-    
-    
-
 }
+
+presto-card-overlay
+
 
 @media screen and (max-width: 530px) 
    {.masthead  
      {
      background-position-y: 30%;
      background-position-x: 30%;
-     background-size:contain;
+     background-size: contain;
      }
-.arrow-align-custom {
+    .arrow-align-custom {
          align-items: flex-end !important;
      }
-     
- }
+    .card-img-overlay {
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    }
+    .card-text-off {
+    display: none;
+    }
+    .card-text-title {
+    margin: 0px;
+    }
+    .card-text-title{
+    padding: 0px;
+    margin-top: 15px;
+    }
+   }
+
+@media screen and (max-width: 990px) 
+   {.card-img 
+     {
+        height: 160px;
+     }
+    }
+
+@media screen and (max-width: 768px) 
+    {.fa-thumbs-up 
+      {
+         margin-left:0px !important;
+      }
+      .footer-card{
+        box-sizing: content-box;
+    }
+    }
+
+@media screen and (max-width: 1200px) 
+   {.card-text-off 
+     {
+        display: none;
+     }
+    .btn-car{
+        margin-left: -20px;
+        margin-top: 20px;
+    }
+    }
+
+@media screen and (max-width: 568px)
+    {
+    .btn-car {
+        margin:0px;
+        margin-top: 15px; 
+        margin-left: -30px !important;
+    }
+    }
+
+
  @media screen and (max-width: 1028px)
  {
      .sparisce-sm {
@@ -300,3 +381,16 @@ footer a {
 }
 
 
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+.slick-slide:focus {
+    outline: none;
+}

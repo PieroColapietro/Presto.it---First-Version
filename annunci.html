@@ -31,7 +31,10 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
+    <!-- bnt like library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awesomw2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 
 <body>
@@ -212,7 +215,6 @@
                 </div>
             </div>
         </div>
-
 </body>
 <!-- Footer -->
 <footer class="footer text-center text-lg-start">
@@ -315,6 +317,15 @@
         .then(annunci => {
             console.log(annunci);
         })
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".like").click(function(){
+            $(this).toggleClass("heart");
+        });
+    });
 </script>
 
 </body>

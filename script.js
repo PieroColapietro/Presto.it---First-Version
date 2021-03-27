@@ -19,14 +19,11 @@ function populateCategories() {
         card.innerHTML = `
                 
                     <div class="card card-custom my-5 mx-5">
-                      
                         <div class="card-body">
                          ${categoria.icon}
                             <h4 class="card-text fw-bold">${categoria.nome}</h4>
-                            
                             <a href="#" class="btn btn-primary btn-custom">Vai alla sezione</a>
                         </div>
-                       
                             <i class="fas fa-carrot card-carrot "></i>
                     </div>
                 </div>
@@ -48,7 +45,7 @@ let lastAdsWrapper = document.querySelector('.pronto-carousel')
 function populateLastAds() {
     
     let ads = [
-        { title: 'moto', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '12100' },
+        { title: 'Moto', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '12100' },
         { title: 'Auto', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '50' },
         { title: 'Gonna', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '1500' },
         { title: 'Occhiali', description: 'Lorem impsum mannag getta ma nnagge tta mannaggetta', price: '100' },
@@ -66,17 +63,28 @@ function populateLastAds() {
     ads.forEach(ad => {
         let card = document.createElement('div')
         card.innerHTML = `
-                <div class="car-cont">
+                        <div class="car-cont">
                             <div class="card card-car bg-dark text-white mx-2">
-                                <img src="https://picsum.photos/800/600"
+                                <img src="https://picsum.photos/800/500"
                                     class="card-img p-radius" alt="...">
-                                <div class="card-img-overlay presto-card-overlay">
-                                   
-                                    <div class="card-text font-main fs-4 mt-2 mb-3">${ad.title}</div>
-                                    <div class="card-text font-main">${ad.description}</div>
-                                    <div class="card-text font-main">${ad.price} $ </div>
-                                    <button button type="button" class="btn btn-car btn-primary mt-3 font-main">Click
-                                        for more info </button>
+                                    <div class="card-img-overlay presto-card-overlay">
+                                    <div class="card-text card-text-title font-main fs-1">${ad.title}</div>
+                                    <div class="card-text card-text-off font-main mt-3">${ad.description}</div>
+                                    <div class="card-text card-text-off font-main">${ad.price} $ </div>
+                                    <div class="container-fluid footercard">
+                                        <div class="row">
+                                            <div class="col-12 footer-card">
+                                                <button button type="button" class="col-6 col-md-8 btn btn-car btn-primary font-main">Click
+                                                for more info </button>
+                                                <i onclick="myFunction(this)" class="fa fa-thumbs-up fs-2 col-1 mx-4 p-3"></i>
+                                                <div>
+                        <a href="#" class="like">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -84,6 +92,13 @@ function populateLastAds() {
         lastAdsWrapper.appendChild(card)
     })
 }
+
+function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+  }
+
+
+
 if(lastAdsWrapper) {
     populateLastAds()
 }
@@ -110,7 +125,8 @@ fetch('./annunci.json').then(data => data.json())
                                     <div class="card-text font-main"> lorem  ipsum dolor sit </div>
                                     <div class="card-text font-main tc-accent">${ad.price} $ </div>
                                     <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
-                                        for more info </button>
+                                        for more info 
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -118,6 +134,7 @@ fetch('./annunci.json').then(data => data.json())
         adsWrapper.appendChild(card)
     });
     }
+
     populateAds(annunci)
 
     function populateFilterCategories() {
