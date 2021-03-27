@@ -268,24 +268,28 @@ presto-card-overlay
      background-size: contain;
      }
     .arrow-align-custom {
-         align-items: flex-end !important;
+     align-items: flex-end !important;
      }
-    .card-img-overlay {
-    padding: 0px;
-    margin: 0px;
-    font-size: 13px;
+    .card-img-overlay 
+    {
+     padding: 0px;
+     margin: 0px;
+     font-size: 13px;
     }
-    .card-text-off {
-    display: none;
+    .card-text-off 
+    {
+     display: none;
     }
-    .card-text-title {
-    margin: 0px;
+    .card-text-title 
+    {
+     margin: 0px;
     }
-    .card-text-title{
-    padding: 0px;
-    margin-top: 15px;
+    .card-text-title
+    {
+     padding: 0px;
+     margin-top: 15px;
     }
-   }
+    }
 
 @media screen and (max-width: 990px) 
    {.card-img 
@@ -324,14 +328,14 @@ presto-card-overlay
     }
     }
 
-
- @media screen and (max-width: 1028px)
+/* media navbar button */
+ @media screen and (max-width: 990px)
  {
      .sparisce-sm {
          display: none  !important;
  }
  }
- @media screen and (min-width: 1028px)
+ @media screen and (min-width: 990px)
  {
      .appare-sm {
          display: none  !important;

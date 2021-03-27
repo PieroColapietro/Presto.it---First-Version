@@ -34,7 +34,7 @@
     <!-- bnt like library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- font awesomw2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
@@ -50,7 +50,7 @@
                         <i class="icofont-rabbit icon-logo"></i>
                     </div>
                     <div class="col-6 d-flex appare-sm align-items-center justify-content-end">
-                        <!-- navbar sm -->
+                        <!-- navbar md/sm -->
                         <!-- bottone vendi i tuoi prodotti icona per sm -->
                         <div class="col-1 appare-sm mx-3">
                             <button class="btn-custom">
@@ -61,7 +61,7 @@
                         </div>
 
 
-                        <!-- bottone menu sm -->
+                        <!-- bottone menu md/sm -->
                         <div class="col-2 text-end  mx-3">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -76,41 +76,10 @@
                     <!-- navbar lg che sparisce in md -->
                     <div class="collapse navbar-collapse col-8 justify-content-between" id="navbarSupportedContent">
                         <div class="col-6 sparisce-sm">
-                            <form class="d-flex">
-                                <div class="nav-item dropdown">
-                                    <button class="btn-custom3">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Categorie
-                                        </a>
-
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <hr class="dropdown-divider">
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </button>
-                                </div>
+                            <form action="./annunci.html" method="GET" class="d-flex">
                                 <input class="form-control me-2 cerca-custom" type="search"
-                                    placeholder="Cosa stai cercando.." aria-label="Search">
-                                <button class="btn-custom4" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
+                                    placeholder="Cosa stai cercando.." aria-label="Search" name="query">
+                                <button class="btn-custom4" type="submit"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
 
@@ -173,9 +142,9 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button accordion-custom" type="button"
+                                <button action="./annunci.html" method="GET"  class="accordion-button accordion-custom" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne">
+                                    aria-controls="collapseOne" name="query">
                                     Cosa stai cercando?
                                 </button>
                             </h2>
@@ -191,18 +160,22 @@
                             </div>
                             <div class="check-box my-4">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked1">
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Default switch checkbox
+                                    <input class="form-check-input" type="checkbox" id="check-custom" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox
                                         input</label>
                                 </div>
+
+                                <!-- Checked switch -->
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked2">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                        checked />
                                     <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox
                                         input</label>
                                 </div>
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Disabled switch
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled"
+                                        disabled />
+                                    <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch
                                         checkbox input</label>
                                 </div>
                             </div>
@@ -210,11 +183,11 @@
                     </div>
                 </div>
             </div>
-                <div class="col-12 col-md-8 justify-content-end border-start rounded-pill border-primary">
-                    <div id="ads-wrapper" class="row justify-content-end"></div>
-                </div>
+            <div class="col-12 col-md-8 justify-content-end border-start rounded-pill border-primary">
+                <div id="ads-wrapper" class="row justify-content-end"></div>
             </div>
         </div>
+    </div>
 </body>
 <!-- Footer -->
 <footer class="footer text-center text-lg-start">
@@ -321,8 +294,8 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $(".like").click(function(){
+    $(document).ready(function () {
+        $(".like").click(function () {
             $(this).toggleClass("heart");
         });
     });
