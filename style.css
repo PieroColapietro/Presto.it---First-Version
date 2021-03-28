@@ -120,6 +120,18 @@ a {
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
+    
+}
+.btn-custom:hover {
+    /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+    background-color: var(--sec-color);
+    border-color: var(--sec-color) !important;
+    border: 2px solid ;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--base-color);
 }
 .btn-custom2 {
     background-color: transparent !important;
@@ -128,10 +140,29 @@ a {
     border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
+    
+}
+.btn-custom2:hover {
+    background-color: transparent !important;
+    border-color: var(--sec-color) !important;
+    border: 2px solid ;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--sec-color);
 }
 .btn-custom3 {
     background-color: transparent !important;
     border-color: var(--accent-color) !important;
+    border: 2px solid ;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 4px;
+}
+.btn-custom3:hover {
+    background-color: transparent !important;
+    border-color: var(--sec-color) !important;
     border: 2px solid ;
     border-radius: 10px;
     text-decoration: none;
@@ -145,6 +176,19 @@ a {
     border: 2px solid ;
     border-radius: 30px;
     background-color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--base-color);
+    
+   
+}
+.btn-custom4:hover {
+    width: 100px !important;
+    height: 100% !important;
+    border-color: var(--sec-color) !important;
+    border: 2px solid ;
+    border-radius: 30px;
+    background-color: var(--sec-color);
     text-decoration: none;
     font-weight: 500;
     color: var(--base-color);

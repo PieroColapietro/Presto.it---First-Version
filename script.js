@@ -1,7 +1,10 @@
 let btnMenu = document.querySelector('.btn-menu')
 btnMenu.addEventListener('click', () => {
     let iconMenu = document.querySelector('#icon-menu')
+    let navBar = document.querySelector('#navbar-presto')
     iconMenu.classList.toggle('rotate')
+    navBar.classList.toggle('navbar-active')
+    
 })
 let navBar = document.querySelector('#navbar-presto')
 document.addEventListener('scroll', () => {
@@ -144,10 +147,10 @@ fetch('./annunci.json').then(data => data.json())
                                 <img src="https://picsum.photos/800/600"
                                     class="card-img p-radius" alt="...">
                                 <div class="card-img-overlay presto-card-overlay">
-                                    <div class="card-text tc-sec fs-4 fw-bold mt-2 mb-3 ">${ad.name}</div>
-                                    <div class="card-text tc-base"> lorem  ipsum dolor sit </div>
-                                    <div class="card-text tc-accent fs-4">${ad.price} $ </div>
-                                    <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
+                                    <div class="card-text tc-sec fs-5 fw-bold ms-3 mt-2 mb-3 ">${ad.name}</div>
+                                    <div class="card-text tc-base ms-4 "> lorem  ipsum dolor sit </div>
+                                    <div class="card-text tc-accent fs-4 ms-4">${ad.price} $ </div>
+                                    <button button type="button" class="btn btn-custom btn-primary mt-2 ms-1 font-main">Click
                                         for more info 
                                     </button>
                                 </div>
