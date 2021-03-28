@@ -1,3 +1,19 @@
+let btnMenu = document.querySelector('.btn-menu')
+btnMenu.addEventListener('click', () => {
+    let iconMenu = document.querySelector('#icon-menu')
+    iconMenu.classList.toggle('rotate')
+})
+let navBar = document.querySelector('#navbar-presto')
+document.addEventListener('scroll', () => {
+    // console.log(window.scrollY)
+    if(window.scrollY > 300) {
+        navBar.classList.add('navbar-active')
+    } else {
+        navBar.classList.remove('navbar-active')
+    }
+})
+
+
 let categoryWrapper = document.querySelector('.categ-carus');
 function populateCategories() {
     // let categories = ['Motori', 'Telefonia', 'Immobili', 'Lavoro', 'Servizi', 'Elettronica', 'Accessori', 'Musica', 'pinco']
@@ -79,7 +95,7 @@ function populateLastAds() {
                                         for more info </button>
                                     <button class="btn like tc-main fs-5">
                                        
-                                        <i class="far fa-thumbs-up"></i>
+                                        <i class="far fa-thumbs-up pollice"></i>
                                 
                                     </button>
                                     </div>

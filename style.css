@@ -1,18 +1,3 @@
-/* 
-
-
-.like {
-    color: #00000030;
-    font-size: 3em;
-}
-.heart{
-    animation: heart 0.5s linear;
-}
-
-.heart i.fa-heart{
-    color: #f44336;
-} */
-
 :root {
     --main-color: #6bb0ff; 
     --sec-color: #113f94;
@@ -58,18 +43,27 @@ body {
 }
 a {
     color: var(--sec-color);
+    font-family: 'Yantramanav', sans-serif;
+    text-decoration: none;
 }
 .btn {
     box-shadow: none !important;
 }
+
+/* NAVBAR */
 .navbar {
-    background-color: var(--base-color2);
+    background-color:transparent;
     display: block;
     align-items: center;
     border-radius:30px;
     border-bottom: 0.5px solid var(--main-color) !important;
+    transition: all 2s ease-in-out;
 }
+.navbar-active {
+    background-color: var(--base-color2);
+    
 
+}
 .navbarBrand {
     font-family: 'Shrikhand', cursive !important;
     font-size: 30px;
@@ -90,6 +84,15 @@ a {
 }
 .menu-collapse {
     color: var(--accent-color) !important;
+}
+.btn-menu:focus {
+    box-shadow: none !important;
+}
+#icon-menu {
+    transition: all 0.5s ease;
+}
+.rotate {
+    transform: rotate(90deg)
 }
 .btn-custom {
     /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
@@ -141,7 +144,7 @@ a {
 .cerca-custom:focus {
     box-shadow: none;
 }
-
+/* NAVBAR  */
 
 .masthead {
     height: 100vh;
@@ -159,16 +162,36 @@ a {
       font-size: 100px;
       
   }
-  .arrow-cst {
-      background-color: transparent;
-      border-color: transparent;
-      font-size: 60px;
-      color: var(--main-color);
-      transform: rotate(135deg);
-      margin-top: 50px;
-    
-    
-  }
+  .btn-arrow {
+    background-color: transparent;
+    color: var(--main-color)!important;
+    font-size: 55px;
+    transform: rotate(135deg);
+    border: none;
+    display: flex;
+    position: relative;
+    /* vertical-align: middle; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    animation-name: arrow-wgg;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+@keyframes arrow-wgg {
+    0% {left:0px; top:-35px}
+    25% {left:0px; top:-60px}
+    50% {left:0px; top:-45px}
+    75% {left:0px; top:-60px}
+   
+    100% {left:0px; top:-35px}
+}
+
 
    .card-custom {
         /* position: absolute;
@@ -373,7 +396,7 @@ presto-card-overlay
 }
 
 
-.far, .fas {
+.pollice {
   font-size: 27px;
   cursor: pointer;
   user-select: none;

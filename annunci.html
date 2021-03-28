@@ -39,7 +39,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg d-flex fixed-top">
+    <nav class="navbar navbar-expand-lg d-flex fixed-top px-0 px-sm-5">
         <div class="container-fluid ">
             <div class="col-12">
                 <div class="row justify-content-between align-items-center">
@@ -50,62 +50,82 @@
                         <i class="icofont-rabbit icon-logo"></i>
                     </div>
                     <div class="col-6 d-flex appare-sm align-items-center justify-content-end">
-                        <!-- navbar md/sm -->
+                        <!-- navbar sm -->
                         <!-- bottone vendi i tuoi prodotti icona per sm -->
-                        <div class="col-1 appare-sm mx-3">
-                            <button class="btn-custom">
-                                <a class=" nav-li-cust" href="#">
+                        <div class="col-1 d-flex justify-content-around appare-sm mx-3">
+                            <button class="btn-custom ms-2">
+                                <a class=" nav-li-cust" href="./annunci.html">
                                     <i class="fas fa-search-dollar"></i>
                                 </a>
                             </button>
+
                         </div>
 
 
-                        <!-- bottone menu md/sm -->
+                        <!-- bottone menu sm -->
                         <div class="col-2 text-end  mx-3">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            <button class="navbar-toggler btn-menu" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon menu-collapse align-middle pt-2">
-                                    <i class="fas fa-ellipsis-v"></i>
+                                <span class="navbar-toggler-icon menu-collapse pt-1 ps-0 ps-sm-5">
+                                    <i id="icon-menu" class="fas fa-ellipsis-v"></i>
                                 </span>
                             </button>
-
                         </div>
                     </div>
-                    <!-- navbar lg che sparisce in md -->
-                    <div class="collapse navbar-collapse col-8 justify-content-between" id="navbarSupportedContent">
-                        <div class="col-6 sparisce-sm">
-                            <form action="./annunci.html" method="GET" class="d-flex">
-                                <input class="form-control me-2 cerca-custom" type="search"
-                                    placeholder="Cosa stai cercando.." aria-label="Search" name="query">
-                                <button class="btn-custom4" type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                        </div>
+                        <!-- navbar lg che sparisce in md -->
+                        <div class="collapse navbar-collapse col-8 justify-content-between" id="navbarSupportedContent">
+                            <div class="text-end my-4 appare-sm">
+                                <ul class="navbar-nav">
+                                    <li>
+                                        <a class="fs-5 tc-sec" href=""> Accedi</a>
+                                    </li>
+                                    <li>
+                                        <a class="fs-5 tc-sec" href=""> Chi siamo</a>
+                                    </li>
+                                    <li>
+                                        <a class="fs-5 tc-sec" href=""> Inizia a vendere </a>
+                                    </li>
+                                    <li>
+                                        <a class="fs-5 tc-sec" href=""> Lavora con noi </a>
+                                    </li>
+                                </ul>
 
-                        <div class="col-5 d-flex justify-content-between sparisce-sm">
-                            <div class="d-flex">
-                                <button class="btn-custom2">
-                                    <a class="nav-link active" aria-current="page" href="#">
-                                        Accedi || Iscriviti
-                                    </a>
-                                </button>
                             </div>
-                            <div>
-                                <button class="btn-custom">
-                                    <a class="nav-link nav-li-cust" href="#">
-                                        Vai agli annunci
-                                    </a>
-                                </button>
+                            <div class="col-6 sparisce-sm">
+                                <!-- search -->
+                                <form action="./annunci.html" method="GET" class="d-flex">
+                                    <input class="form-control me-2 cerca-custom" type="search"
+                                        placeholder="Cosa stai cercando.." aria-label="Search" name="query">
+                                    <button class="btn-custom4" type="submit"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                            <!-- button accedi/vai agli annunci    -->
+                            <div class="col-5 d-flex justify-content-around sparisce-sm">
+                                <div class="d-flex">
+                                    <button class="btn-custom2">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            Accedi || Iscriviti
+                                        </a>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="btn-custom">
+                                        <a class="nav-link nav-li-cust" href="./annunci.html">
+                                            Vai agli annunci
+                                        </a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
 
     </nav>
+
+
 
     <div class="container-fluid">
         <div class="row d-flex justify-content-around mt-5 py-5 ">
@@ -115,15 +135,15 @@
                         <img class="filter-icon" src="./img/sagoma-coniglietto-removebg-preview.png" alt="">
                     </div>
                     <h6 class="fs-1 tc-accent">
-                        Ordina per
+                        Filtra la tua ricerca
                     </h6>
 
                     <div class="accordion m-4" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button action="./annunci.html" method="GET"  class="accordion-button accordion-custom" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne" name="query">
+                                <button action="./annunci.html" method="GET" class="accordion-button accordion-custom"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne" name="query">
                                     Cosa stai cercando?
                                 </button>
                             </h2>
@@ -137,28 +157,28 @@
                                     </div>
                                 </div>
                             </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button accordion-custom" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne">
-                                    Filtra per categoria
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body accordion-custom " id="category-filter">
-                                    <div class="form-check">
-                                        <input category-filter='All' class="form-check-input" type="radio"
-                                            name="category-filter">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Tutti gli annunci
-                                        </label>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button accordion-custom" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        Filtra per categoria
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body accordion-custom " id="category-filter">
+                                        <div class="form-check">
+                                            <input category-filter='All' class="form-check-input" type="radio"
+                                                name="category-filter">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Tutti gli annunci
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                       
+
                             <div class="check-box my-4">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" id="check-custom" />
