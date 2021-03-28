@@ -3,9 +3,10 @@ btnMenu.addEventListener('click', () => {
     let iconMenu = document.querySelector('#icon-menu')
     iconMenu.classList.toggle('rotate')
 })
+
+
 let navBar = document.querySelector('#navbar-presto')
 document.addEventListener('scroll', () => {
-    // console.log(window.scrollY)
     if(window.scrollY > 150) {
         navBar.classList.add('navbar-active')
     } else {
@@ -81,8 +82,7 @@ function populateLastAds() {
 
     ads.forEach(ad => {
         let card = document.createElement('div')
-        card.innerHTML = `
-                        <div class="car-cont">
+        card.innerHTML = `<div class="car-cont">
                             <div class="card card-car bg-dark text-white mx-2">
                                 <img src="https://picsum.photos/800/500"
                                     class="card-img p-radius" alt="...">
@@ -91,7 +91,7 @@ function populateLastAds() {
                                     <div class="card-text card-text-off tc-base ">${ad.description}</div>
                                     <div class="card-text card-text-off tc-accent fs-4">${ad.price} $ </div>
                                     <div class="container-fluid footercard d-flex justify-content-around align-items-center my-3">
-                                    <button button type="button" class="col-7 col-md-8 btn btn-car btn-primary font-main">Click
+                                    <button type="button" class="col-7 col-md-8 btn btn-car btn-primary font-main" data-bs-toggle="modal" data-bs-target="#adModal">Click
                                         for more info </button>
                                         <div>
                                     <button class="btn like tc-main fs-5 mb-xl-4">
@@ -113,15 +113,12 @@ if (lastAdsWrapper) {
     populateLastAds()
 }
 let likebtns = document.querySelectorAll('.like')
-// console.log(likebtns)
 
 likebtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log(btn)
-        // btn.addEventListener.toggle('')
-        btn.classList.toggle('heart')
-        btn.children[0].classList.toggle('fas')
-        btn.children[0].classList.toggle('far')
+    btn.classList.toggle('heart')
+    btn.children[0].classList.toggle('fas')
+    btn.children[0].classList.toggle('far')
     })
 
 })
@@ -141,12 +138,12 @@ fetch('./annunci.json').then(data => data.json())
 
                 card.innerHTML = `<div class="car-cont m-2">
                             <div class="card card-car bg-dark text-white mx-2">
-                                <img src="https://picsum.photos/800/600"
+                                <img src="https://picsum.photos/600/300"
                                     class="card-img p-radius" alt="...">
-                                <div class="card-img-overlay presto-card-overlay">
-                                    <div class="card-text tc-sec fs-4 fw-bold mt-2 mb-3 ">${ad.name}</div>
-                                    <div class="card-text tc-base"> lorem  ipsum dolor sit </div>
-                                    <div class="card-text tc-accent fs-4">${ad.price} $ </div>
+                                <div class="card-img-overlay presto-card-overlay text-center">
+                                    <div class="card-text mt-3 tc-sec fs-4 fw-bold">${ad.name}</div>
+                                    <div class="card-text tc-base mt-2"> lorem  ipsum dolor sit </div>
+                                    <div class="card-text tc-accent fs-4 mt-2">${ad.price} $ </div>
                                     <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
                                         for more info 
                                     </button>
