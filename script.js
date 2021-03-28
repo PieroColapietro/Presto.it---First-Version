@@ -6,7 +6,7 @@ btnMenu.addEventListener('click', () => {
 let navBar = document.querySelector('#navbar-presto')
 document.addEventListener('scroll', () => {
     // console.log(window.scrollY)
-    if(window.scrollY > 300) {
+    if(window.scrollY > 150) {
         navBar.classList.add('navbar-active')
     } else {
         navBar.classList.remove('navbar-active')
@@ -226,9 +226,3 @@ fetch('./annunci.json').then(data => data.json())
 
         }filterSearch()
     })
-
-// function likeHeart() {
-//     let likeId =  document.querySelector('#likes-id') 
-//         likeId.classList.toggle(`heart`)
-// }
-// likeheart()

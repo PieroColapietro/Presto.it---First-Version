@@ -38,6 +38,16 @@ body {
 .bg-main {
     background-color: var(--main-color)
 }
+
+.nav-pills .nav-link.active {
+    background-color: var(--sec-color);
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    letter-spacing: 1px;
+}
+
 .bg-base {
     background-color: var(--base-color)
 }
@@ -57,20 +67,27 @@ a {
     align-items: center;
     border-radius:30px;
     border-bottom: 0.5px solid var(--main-color) !important;
-    transition: all 2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .navbar-active {
     background-color: var(--base-color2);
-    
 
 }
+
+.filtericon2 {
+    width: 100vh;
+    margin-left: -180px;
+    opacity: 40%;
+    margin-right: -160px;
+}
+
 .navbarBrand {
     font-family: 'Shrikhand', cursive !important;
     font-size: 30px;
     color: var(--main-color) !important;
     margin-right: 0px;
     margin-left:4px;
-    background-color: trasparent;
+    background-color: transparent;
     display: block;
     align-items: center;
     text-decoration: none;
@@ -312,10 +329,13 @@ footer a {
      }
     }
 
-@media screen and (max-width: 768px) 
+@media screen and (max-width: 770px) 
     {
       .footer-card{
         box-sizing: content-box;
+    }
+    .filtericon2 {
+       display: none;
     }
     }
 
@@ -383,6 +403,14 @@ footer a {
     width: 200px;
     opacity: 40%;
     
+}
+
+.filter-icon2 {
+    height: 450px;
+    width: 800px;
+    opacity: 40%;
+    margin-top: 100px;
+    margin-left: -200px;
 }
 
 .accordion-custom {
