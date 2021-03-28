@@ -271,7 +271,7 @@ footer a {
     letter-spacing: 1px;
 }
 
-presto-card-overlay
+
 
 
 @media screen and (max-width: 530px) 
@@ -395,7 +395,7 @@ presto-card-overlay
     box-shadow: none; 
 }
 
-
+/* button like */
 .pollice {
   font-size: 27px;
   cursor: pointer;
@@ -412,6 +412,7 @@ presto-card-overlay
 .like {
     box-shadow: none !important;
     border: none !important;
+    margin-top: 0px;
     /* color: var(--main-color) !important; */
   /* transform: rotate(350deg) scale(1.2); */
   /* transform:scale(1.3) */
@@ -423,7 +424,7 @@ presto-card-overlay
 }
 .heart:focus {
     animation-name: heart;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-direction: reverse;
     animation-timing-function: 1;
     /* animation-play-state: ; */

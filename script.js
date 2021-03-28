@@ -87,17 +87,19 @@ function populateLastAds() {
                                 <img src="https://picsum.photos/800/500"
                                     class="card-img p-radius" alt="...">
                                     <div class="card-img-overlay presto-card-overlay">
-                                    <div class="card-text card-text-title font-main fs-1">${ad.title}</div>
-                                    <div class="card-text card-text-off font-main mt-3">${ad.description}</div>
-                                    <div class="card-text card-text-off font-main">${ad.price} $ </div>
-                                    <div class="container-fluid footercard d-flex justify-content-around align-middle my-3">
+                                    <div class="card-text card-text-title tc-sec fs-2 fw-bold">${ad.title}</div>
+                                    <div class="card-text card-text-off tc-base ">${ad.description}</div>
+                                    <div class="card-text card-text-off tc-accent fs-4">${ad.price} $ </div>
+                                    <div class="container-fluid footercard d-flex justify-content-around align-items-center my-3">
                                     <button button type="button" class="col-7 col-md-8 btn btn-car btn-primary font-main">Click
                                         for more info </button>
-                                    <button class="btn like tc-main fs-5">
+                                        <div>
+                                    <button class="btn like tc-main fs-5 mb-xl-4">
                                        
                                         <i class="far fa-thumbs-up pollice"></i>
                                 
                                     </button>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -142,9 +144,9 @@ fetch('./annunci.json').then(data => data.json())
                                 <img src="https://picsum.photos/800/600"
                                     class="card-img p-radius" alt="...">
                                 <div class="card-img-overlay presto-card-overlay">
-                                    <div class="card-text font-main fs-4 mt-2 mb-3 tc-accent">${ad.name}</div>
-                                    <div class="card-text font-main"> lorem  ipsum dolor sit </div>
-                                    <div class="card-text font-main tc-accent">${ad.price} $ </div>
+                                    <div class="card-text tc-sec fs-4 fw-bold mt-2 mb-3 ">${ad.name}</div>
+                                    <div class="card-text tc-base"> lorem  ipsum dolor sit </div>
+                                    <div class="card-text tc-accent fs-4">${ad.price} $ </div>
                                     <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
                                         for more info 
                                     </button>
