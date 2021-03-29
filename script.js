@@ -149,7 +149,7 @@ fetch('./annunci.json').then(data => data.json())
                                     <div class="card-text mt-3 tc-sec fs-4 fw-bold">${ad.name}</div>
                                     <div class="card-text tc-base mt-2"> lorem  ipsum dolor sit </div>
                                     <div class="card-text tc-accent fs-4 mt-2">${ad.price} $ </div>
-                                    <button button type="button" class="btn btn-custom btn-primary mt-3 font-main">Click
+                                    <button button type="button" class="btn btn-custom btn-primary mt-0 font-main">Click
                                         for more info 
                                     </button>
                                 </div>
