@@ -1,7 +1,12 @@
+
+
 let btnMenu = document.querySelector('.btn-menu')
 btnMenu.addEventListener('click', () => {
     let iconMenu = document.querySelector('#icon-menu')
+    let navBar = document.querySelector('#navbar-presto')
     iconMenu.classList.toggle('rotate')
+    navBar.classList.toggle('navbar-active')
+    
 })
 
 
