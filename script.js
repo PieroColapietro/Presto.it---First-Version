@@ -143,7 +143,7 @@ fetch('./annunci.json').then(data => data.json())
 
                 card.innerHTML = `<div class="car-cont m-2">
                             <div class="card card-car bg-dark text-white mx-2">
-                                <img src="https://picsum.photos/600/300"
+                                <img src="https://picsum.photos/800/650"
                                     class="card-img p-radius" alt="...">
                                 <div class="card-img-overlay presto-card-overlay text-center">
                                     <div class="card-text mt-3 tc-sec fs-4 fw-bold">${ad.name}</div>
